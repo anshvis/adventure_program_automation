@@ -10,7 +10,9 @@ print(file_registered)
 print("Click on the file with all the students on the waitlist:")
 file_waitlist = filedialog.askopenfile()
 print(file_waitlist)
-output_name = input("What would you like the file to be called?\n")
+output_name = input("What would you like the file to be called? If you would like to exit the program, type 'quit'\n")
+if output_name == 'quit':
+    quit()
 output_name += '.csv'
 
 output = open(output_name, "w")
